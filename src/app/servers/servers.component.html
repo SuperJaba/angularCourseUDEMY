@@ -6,7 +6,7 @@
 <p>{{ serverName }}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add erver</button>
 <p [innerText]="allowNewServer"></p>
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverAdded">{{ serverCreationStatus }}</p>
 <hr>
 <label>User name:</label>
 <input type="text" class="form-control" [(ngModel)]="username">
