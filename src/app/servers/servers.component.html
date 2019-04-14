@@ -1,5 +1,6 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add erver</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add erver</button>
 <p [innerText]="allowNewServer"></p>
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <div class="container">
     <app-warrning-alert></app-warrning-alert>
